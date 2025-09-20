@@ -10,7 +10,7 @@ export default function Notes({ token, setToken }) {
 
   const fetchNotes = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/notes", {
+      const res = await axios.get("https://secretnotesbackend.onrender.com/api/notes", {
         headers: { Authorization: token },
       });
       setNotes(res.data);
@@ -26,7 +26,7 @@ export default function Notes({ token, setToken }) {
   const addNote = async () => {
     if (!content.trim()) return;
     await axios.post(
-      "http://localhost:5000/api/notes",
+      "https://secretnotesbackend.onrender.com/api/notes",
       { content },
       { headers: { Authorization: token } }
     );
@@ -35,7 +35,7 @@ export default function Notes({ token, setToken }) {
   };
 
   const deleteNote = async (id) => {
-    await axios.delete(`http://localhost:5000/api/notes/${id}`, {
+    await axios.delete(`https://secretnotesbackend.onrender.com/api/notes/${id}`, {
       headers: { Authorization: token },
     });
     fetchNotes();
@@ -48,7 +48,7 @@ export default function Notes({ token, setToken }) {
 
   const saveEdit = async (id) => {
     await axios.put(
-      `http://localhost:5000/api/notes/${id}`,
+      `https://secretnotesbackend.onrender.com/api/notes/${id}`,
       { content: editContent },
       { headers: { Authorization: token } }
     );
@@ -100,3 +100,4 @@ export default function Notes({ token, setToken }) {
     </div>
   );
 }
+
