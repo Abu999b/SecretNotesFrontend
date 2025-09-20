@@ -8,7 +8,7 @@ export default function Register() {
   const handleRegister = async () => {
     if (!username || !password) return alert("Enter all fields");
     try {
-      await axios.post("http://localhost:5000/api/auth/register", { username, password });
+      await axios.post("https://secretnotesbackend.onrender.com/api/auth/register", { username, password });
       alert("User registered successfully!");
       setUsername("");
       setPassword("");
@@ -35,3 +35,4 @@ export default function Register() {
     </div>
   );
 }
+
