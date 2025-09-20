@@ -1,0 +1,41 @@
+.notes-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.notes-form input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.notes-form button {
+  padding: 0.5rem 1rem;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 4px;
+}
+
+.notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f1f1;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.note-item input {
+  flex: 1;
+  margin-right: 0.5rem;
+}
+
+.note-item button {
+  margin-left: 0.25rem;
+}
