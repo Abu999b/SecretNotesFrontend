@@ -8,7 +8,7 @@ export default function Login({ setToken }) {
   const handleLogin = async () => {
     if (!username || !password) return alert("Enter all fields");
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", { username, password });
+      const res = await axios.post("https://secretnotesbackend.onrender.com/api/auth/login", { username, password });
       localStorage.setItem("token", res.data.token);
       setToken(res.data.token);
     } catch (err) {
@@ -34,3 +34,4 @@ export default function Login({ setToken }) {
     </div>
   );
 }
+
